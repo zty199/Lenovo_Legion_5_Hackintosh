@@ -1,4 +1,4 @@
-# macOS on Lenovo Legion 5
+# macOS on Lenovo Legion 5 6th Gen
 
 ![Desktop](/Images/Desktop.png)
 
@@ -21,7 +21,7 @@ Coming soon.
 
 Type | Spec | Status
 :---------|:---------|:----------
-Model Name      | Lenovo Legion 5 | ✅
+Model Name      | Lenovo Legion 5 6th Gen | ✅
 CPU              | AMD Ryzen™ 7 5800H CPU | ✅
 External Graphics Card | AMD Radeon™ RX 6600M | ✅
 RAM           | 16 GB 3200 MHz DDR4 | ✅
