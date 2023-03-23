@@ -33,7 +33,8 @@ Audio       | Realtek ALC287 | ✅
 
 ## macOS Update History
 
-- ✅ macOS Monterey 12.6
+- ✅ macOS Monterey 12.6.1
+- ✅ macOS Ventura 13.2.1
 
 ## What's working
 
@@ -53,7 +54,7 @@ Shutdown / Reboot |✅
 Type | Info | Status
 :---------|:---------|:----------
 USB | At the moment we need to disable one of the two USB controllers, so the ports connected to it will NOT work even in other OSes, until the setting is reverted in UMAF. | ⚠️
-Bluetooth | ^ | ^
+Bluetooth | Same as USB | ⚠️
 Brightness | Doesn't even work properly in Linux, this is because this laptop uses DC Dimmer instead of PWN, (Lunar)[https://github.com/alin23/Lunar] app can be used as workaround. | ⚠️
 Sleep | PowerPlay panic on wake, still investigating | ⚠️
 
@@ -72,7 +73,7 @@ Download [Universal AMD Form Browser](https://github.com/DavidS95/Smokeless_UMAF
 1.  Format an USB drive as **GPT + FAT32** with Rufus and copy the files included in the zip to the newly created partition
 2.  Boot from your USB drive
 3.  Navigate to **Device Manager** > **AMD CBS** > **FCH Common Options** > **USB Configuration Options** > **XHCI1 Controller Enable**: Change to **Disabled**
-4.  **Esc** to back and press **Y** when prompted to save, Esc to back, then **Reset** on first menu
+4.  ESC to back and press **Y** when prompted to save, ESC to back, then **Reset** on first menu
 
 ![](https://user-images.githubusercontent.com/8891448/226887440-8712f449-cc25-43e4-9fb4-1afac1c74b54.gif)
 
@@ -97,6 +98,7 @@ source <(curl -s https://raw.githubusercontent.com/mikigal/ryzen-hackintosh/mast
 ## Notes
 
 > **Info**
+
 At the moment, using the **MacBookPro16,4** SMBIOS will result in HEVC encoding not working (H264 decoding/encoding + HEVC decoding will still work). If you absolutely require this functionality, you should switch to the MacPro7,1 SMBIOS. Note that this will result in a degraded quality of laptop-specific features.
 
 ## Kexts used
