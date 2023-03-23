@@ -261,7 +261,7 @@
 				<string>AMD Radeon RX 6600M</string>
 				<key>unfairgva</key>
 				<integer>7</integer>
-				<key>CFG_LINK_FIXED_MAP</key>
+				<key>CFG,CFG_LINK_FIXED_MAP</key>
 				<true/>
 			</dict>
 			<key>PciRoot(0x1)/Pci(0x2,0x4)/Pci(0x0,0x0)</key>
