@@ -59,10 +59,10 @@ iServices | Not set-up properly, will work soon | ❌
 ### Disabling XHC1
 
 > **Warning**
-
+>
 > Do NOT edit any settings except what you're told to if you don't know what you're doing. I am not responsible for any harm done to your laptop.
 
-Download [UniversalAMDFormBrowser](https://github.com/DavidS95/Smokeless_UMAF/blob/main/UniversalAMDFormBrowser.zip)
+Download [Universal AMD Form Browser](https://github.com/DavidS95/Smokeless_UMAF/blob/main/UniversalAMDFormBrowser.zip)
 
 1.  Format an USB drive as **GPT + FAT32** with Rufus and copy the files included in the zip to the newly created partition
 2.  Boot from your USB drive
