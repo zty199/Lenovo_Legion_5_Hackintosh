@@ -54,7 +54,7 @@ USB storage | The XHCI controller is unsupported, so we have to use GenericUSBXH
 MediaTek Wi-Fi | MediaTek Wi-Fi doesn't work on macOS, note that Intel Wi-Fi will work. | ❌
 iServices | Not set-up properly, will work soon | ❌
 
-## Preinstallation notes
+## Pre-installation notes
 
 ### Disabling XHC1
 
@@ -81,6 +81,13 @@ Type 2 and select your **config.plist**, then type 3 and type **MacBookPro16,4**
 ### Changing your CPU name
 
 If you CPU is not **AMD RyzenTM 7 5800H**, download [CPU-Name](https://github.com/corpnewt/CPU-Name), and follow its instructions.
+
+## Post-installation notes
+
+After you're at the macOS desktop, running [@mikigal's script](https://github.com/mikigal/ryzen-hackintosh/blob/master/Resources/ryzen_patch.sh) to set MKL Debug settings is recommended.
+```bash
+source <(curl -s https://raw.githubusercontent.com/mikigal/ryzen-hackintosh/master/Resources/ryzen_patch.sh)
+```
 
 ## Kexts used
 
