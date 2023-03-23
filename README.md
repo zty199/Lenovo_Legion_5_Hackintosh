@@ -54,6 +54,22 @@ USB storage | The XHCI controller is unsupported, so we have to use GenericUSBXH
 MediaTek Wi-Fi | MediaTek Wi-Fi doesn't work on macOS, note that Intel Wi-Fi will work. | ❌
 iServices | Not set-up properly, will work soon | ❌
 
+## Preinstallation notes
+
+### Disabling XHC1
+
+> **Warning**
+> Do NOT edit any settings except what you're told to if you don't know what you're doing. I am not responsible for any harm done to your laptop.
+
+Download [UniversalAMDFormBrowser](https://github.com/DavidS95/Smokeless_UMAF/blob/main/UniversalAMDFormBrowser.zip)
+
+1.  Format an USB drive as **GPT + FAT32** with Rufus and copy the files included in the zip to the newly created partition
+2.  Boot from your USB drive
+3.  Navigate to **Device Manager** > **AMD CBS** > **FCH Common Options** > **USB Configuration Options** > **XHCI1 Controller Enable**: Change to **Disabled**
+4.  **Esc** to back and press **Y** when prompted to save, Esc to back, then **Reset** on first menu
+
+![](https://user-images.githubusercontent.com/8891448/226887440-8712f449-cc25-43e4-9fb4-1afac1c74b54.gif)
+
 ## Kexts used
 
 Kext | Info
