@@ -110,6 +110,7 @@ Kext | Info
 [AppleALC](https://github.com/acidanthera/AppleALC) | Fixes audio
 [AppleMCEReporterDisabler](https://files.amd-osx.com/AppleMCEReporterDisabler.kext.zip) | Disables AppleIntelMCEReporter which causes panics on AMD CPUs
 [ECEnabler](https://github.com/1Revenger1/ECEnabler) | Battery reading fixes
+[FeatureUnlock](https://github.com/acidanthera/FeatureUnlock) | Fix Continuity Camera on macOS Ventura
 [Lilu](https://github.com/acidanthera/Lilu) | Patch Engine
 [NVMeFix](https://github.com/acidanthera/NVMeFix) | NVMe Power Management
 [RadeonSensor](https://github.com/aluveitie/RadeonSensor) | Temperature readings for AMD GPUs. Disable for NVIDIA GPUs
