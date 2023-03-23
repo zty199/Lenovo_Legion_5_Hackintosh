@@ -9,6 +9,8 @@
 - [macOS Compatibility](https://github.com/extremegrief1/Lenovo_Legion_5_Hackintosh#macos-update-history)
 - [What's working](https://github.com/extremegrief1/Lenovo_Legion_5_Hackintosh#whats-working)
 - [What's not working](https://github.com/extremegrief1/Lenovo_Legion_5_Hackintosh#whats-not-working)
+- [Instructions](https://github.com/extremegrief1/Lenovo_Legion_5_Hackintosh#instructions)
+- [Notes](https://github.com/extremegrief1/Lenovo_Legion_5_Hackintosh#notes)
 - [Kexts used](https://github.com/extremegrief1/Lenovo_Legion_5_Hackintosh#Kexts-used)
 - [SSDTs used](https://github.com/extremegrief1/Lenovo_Legion_5_Hackintosh#SSDTs-used)
 - [Credits](https://github.com/extremegrief1/Lenovo_Legion_5_Hackintosh#credits)
@@ -23,7 +25,7 @@ Type | Spec | Status
 :---------|:---------|:----------
 Model Name      | Lenovo Legion 5 6th Gen | ✅
 CPU              | AMD Ryzen™ 7 5800H CPU | ✅
-External Graphics Card | AMD Radeon™ RX 6600M | ✅
+Dedicated GPU | AMD Radeon™ RX 6600M | ✅
 RAM           | 16 GB 3200 MHz DDR4 | ✅
 Wi-Fi             | Intel® Wi-Fi 6E AX210 | ✅
 Ethernet          | Realtek RTL8111 | ✅
@@ -37,26 +39,29 @@ Audio       | Realtek ALC287 | ✅
 
 Type | Status
 :---------|:----------
-CPU | ✅  
-AMD GPU | ✅  
-Audio | ✅  
-Ethernet | ✅  
-Intel Wi-Fi | ✅  
-USB periphials | ✅
-Battery | ✅
-Shutdown / Reboot |✅  
+CPU | ✅
+AMD GPU Acceleration | ✅
+CPU & GPU Power Management | ✅
+Audio | ✅
+Ethernet | ✅
+Intel Wi-Fi | ✅
+Battery Status | ✅
+Shutdown / Reboot |✅
 
 ## What's not working
 
 Type | Info | Status
 :---------|:---------|:----------
-USB storage | The XHCI controller is unsupported, so we have to use GenericUSBXHCI at the moment which doesn't fully support Monterey. | ❌
-MediaTek Wi-Fi | MediaTek Wi-Fi doesn't work on macOS, note that Intel Wi-Fi will work. | ❌
-iServices | Not set-up properly, will work soon | ❌
+USB | At the moment we need to disable one of the two USB controllers, so the ports connected to it will NOT work even in other OSes, until the setting is reverted in UMAF. | ⚠️
+Bluetooth | ^ | ^
+Brightness | Doesn't even work properly in Linux, this is because this laptop uses DC Dimmer instead of PWN, (Lunar)[https://github.com/alin23/Lunar] app can be used as workaround. | ⚠️
+Sleep | PowerPlay panic on wake, still investigating | ⚠️
 
-## Pre-installation notes
+## Instructions
 
-### Disabling XHC1
+### Pre-Installation
+
+#### Disabling XHC1
 
 > **Warning**
 >
@@ -73,49 +78,49 @@ Download [Universal AMD Form Browser](https://github.com/DavidS95/Smokeless_UMAF
 
 > Thanks to @kalfmann for the GIF.
 
-### Changing your SMBIOS data
+#### Changing your SMBIOS data
 
 Download and run [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
 Type 2 and select your **config.plist**, then type 3 and type **MacBookPro16,4**
 
-### Changing your CPU name
+#### Changing your CPU name
 
-If you CPU is not **AMD RyzenTM 7 5800H**, download [CPU-Name](https://github.com/corpnewt/CPU-Name), and follow its instructions.
+If you CPU is not **AMD Ryzen™ 7 5800H**, download [CPU-Name](https://github.com/corpnewt/CPU-Name), and follow its instructions.
 
-## Post-installation notes
+### Post-installation notes
 
 After you're at the macOS desktop, running [@mikigal's script](https://github.com/mikigal/ryzen-hackintosh/blob/master/Resources/ryzen_patch.sh) to set MKL Debug settings is recommended.
 ```bash
 source <(curl -s https://raw.githubusercontent.com/mikigal/ryzen-hackintosh/master/Resources/ryzen_patch.sh)
 ```
 
+## Notes
+
+> **Info**
+At the moment, using the **MacBookPro16,4** SMBIOS will result in HEVC encoding not working (H264 decoding/encoding + HEVC decoding will still work). If you absolutely require this functionality, you should switch to the MacPro7,1 SMBIOS. Note that this will result in a degraded quality of laptop-specific features.
+
 ## Kexts used
 
 Kext | Info
 :---------|:---------
-[AirportItlwm](https://github.com/OpenIntelWireless/itlwm) | Adds Intel Wi-Fi support. Disable for MediaTek Wi-Fi.
-[AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor) | Adds power management support for AMD CPUs.
-[AmdTscSync](https://github.com/naveenkrdy/AmdTscSync) | Syncs TSC between cores for AMD CPUs.
-[AppleALC](https://github.com/acidanthera/AppleALC) | Fixes audio.
-[AppleMCEReporterDisabler](https://files.amd-osx.com/AppleMCEReporterDisabler.kext.zip) | Disables AppleIntelMCEReporter which causes panics on AMD CPUs.
-[BlueToolFixup](https://github.com/acidanthera/BrcmPatchRAM) | Patches macOS Monterey+'s Bluetooth stack to allow non-Apple Bluetooth cards.
-[ECEnabler](https://github.com/1Revenger1/ECEnabler) | Fixes EC issues.
-[GenericUSBXHCI](https://github.com/RehabMan/OS-X-Generic-USB3) | Generic XHCI driver
-[IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) | Uploads Intel Wireless Bluetooth Firmware to provide native Bluetooth in macOS. Disable for MediaTek Wi-Fi.
-[IntelBTPatcher](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) | Fixes some Intel Bluetooth bugs. Disable for MediaTek Wi-Fi.
-[Lilu](https://github.com/acidanthera/Lilu) | An open source kernel extension bringing a platform for arbitrary kext, library, and program patching throughout the system for macOS.
-[NVMeFix](https://github.com/acidanthera/NVMeFix) | Patches the NVMe stack for native power management.
-[RadeonSensor](https://github.com/aluveitie/RadeonSensor) | Adds temperature reading to AMD GPUs. Disable for NVIDIA GPUs.
-[RealtekRTL8111](https://github.com/Mieze/RTL8111_driver_for_OS_X) | Open source macOS driver for the Realtek RTL8111 family NICs.
-[RestrictEvents](https://github.com/acidanthera/RestrictEvents) | Blocks unwanted processes causing compatibility issues on different hardware and unlocking the support for certain features restricted to other hardware.
-[SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor) | Companion to AMDRyzenCPUPowerManagement.
-[SMCBatteryManager](https://github.com/acidanthera/VirtualSMC) | Enables battery readings.
-[SMCRadeonGPU](https://github.com/aluveitie/RadeonSensor) | Companion to RadeonSensor. Disable for NVIDIA GPUs.
+[AirportItlwm](https://github.com/OpenIntelWireless/itlwm) | Intel Wi-Fi support. Disable for MediaTek Wi-Fi
+[AMDRyzenCPUPowerManagement](https://github.com/trulyspinach/SMCAMDProcessor) | AMD CPU Power Management
+[AppleALC](https://github.com/acidanthera/AppleALC) | Fixes audio
+[AppleMCEReporterDisabler](https://files.amd-osx.com/AppleMCEReporterDisabler.kext.zip) | Disables AppleIntelMCEReporter which causes panics on AMD CPUs
+[ECEnabler](https://github.com/1Revenger1/ECEnabler) | Battery reading fixes
+[Lilu](https://github.com/acidanthera/Lilu) | Patch Engine
+[NVMeFix](https://github.com/acidanthera/NVMeFix) | NVMe Power Management
+[RadeonSensor](https://github.com/aluveitie/RadeonSensor) | Temperature readings for AMD GPUs. Disable for NVIDIA GPUs
+[RealtekRTL8111](https://github.com/Mieze/RTL8111_driver_for_OS_X) | Ethernet driver
+[RestrictEvents](https://github.com/acidanthera/RestrictEvents) | Change CPU Name
+[SMCAMDProcessor](https://github.com/trulyspinach/SMCAMDProcessor) | Companion to AMDRyzenCPUPowerManagement
+[SMCBatteryManager](https://github.com/acidanthera/VirtualSMC) | Enables battery reading
+[SMCRadeonGPU](https://github.com/aluveitie/RadeonSensor) | Companion to RadeonSensor. Disable for NVIDIA GPUs
 [USBToolBox](https://github.com/USBToolBox/kext) | Useful USB ACPI renames and prerequisite for UTBMap
 [UTBMap](https://github.com/USBToolBox/tool) | USB Map
-[VirtualSMC](https://github.com/acidanthera/VirtualSMC) | Advanced Apple SMC emulator in the kernel. Requires Lilu for full functioning.
-[VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2) | Fixes keyboard.
-[WhateverGreen](https://github.com/acidanthera/WhateverGreen) | Fixes AMD GPU.
+[VirtualSMC](https://github.com/acidanthera/VirtualSMC) | Advanced Apple SMC emulator in the kernel
+[VoodooPS2Controller](https://github.com/acidanthera/VoodooPS2) | PS/2 Keyboard support
+[WhateverGreen](https://github.com/acidanthera/WhateverGreen) | GPU patches
   
 ## SSDTs Used
   
