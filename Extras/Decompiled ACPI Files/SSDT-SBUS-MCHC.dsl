@@ -1,4 +1,24 @@
-DefinitionBlock ("", "SSDT", 2, "ACDT", "SSDTMCHCSBUS", 0x00000000)
+/*
+ * Intel ACPI Component Architecture
+ * AML/ASL+ Disassembler version 20221020 (32-bit version)
+ * Copyright (c) 2000 - 2022 Intel Corporation
+ * 
+ * Disassembling to symbolic ASL+ operators
+ *
+ * Disassembly of SSDT-SBUS-MCHC.aml, Thu Mar 23 19:18:39 2023
+ *
+ * Original Table Header:
+ *     Signature        "SSDT"
+ *     Length           0x000000FC (252)
+ *     Revision         0x02
+ *     Checksum         0x68
+ *     OEM ID           "ACDT"
+ *     OEM Table ID     "MCHCSBUS"
+ *     OEM Revision     0x00000000 (0)
+ *     Compiler ID      "INTL"
+ *     Compiler Version 0x20220331 (539099953)
+ */
+DefinitionBlock ("", "SSDT", 2, "ACDT", "MCHCSBUS", 0x00000000)
 {
     External (_SB_.PCI0, DeviceObj)
     External (_SB_.PCI0.SMBS, DeviceObj)
