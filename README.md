@@ -73,6 +73,15 @@ Download [Universal AMD Form Browser](https://github.com/DavidS95/Smokeless_UMAF
 
 > Thanks to @kalfmann for the GIF.
 
+### Changing your SMBIOS data
+
+Download and run [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
+Type 2 and select your **config.plist**, then type 3 and type **MacBookPro16,4**
+
+### Changing your CPU name
+
+If you CPU is not **AMD RyzenTM 7 5800H**, download [CPU-Name](https://github.com/corpnewt/CPU-Name), and follow its instructions.
+
 ## Kexts used
 
 Kext | Info
