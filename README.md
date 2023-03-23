@@ -59,6 +59,7 @@ iServices | Not set-up properly, will work soon | ❌
 ### Disabling XHC1
 
 > **Warning**
+
 > Do NOT edit any settings except what you're told to if you don't know what you're doing. I am not responsible for any harm done to your laptop.
 
 Download [UniversalAMDFormBrowser](https://github.com/DavidS95/Smokeless_UMAF/blob/main/UniversalAMDFormBrowser.zip)
@@ -69,6 +70,8 @@ Download [UniversalAMDFormBrowser](https://github.com/DavidS95/Smokeless_UMAF/bl
 4.  **Esc** to back and press **Y** when prompted to save, Esc to back, then **Reset** on first menu
 
 ![](https://user-images.githubusercontent.com/8891448/226887440-8712f449-cc25-43e4-9fb4-1afac1c74b54.gif)
+
+> Thanks to @kalfmann for the GIF.
 
 ## Kexts used
 
