@@ -260,7 +260,7 @@
 				<key>model</key>
 				<string>AMD Radeon RX 6600M</string>
 				<key>unfairgva</key>
-				<data>AQ==</data>
+				<integer>7</integer>
 				<key>CFG_LINK_FIXED_MAP</key>
 				<true/>
 			</dict>
