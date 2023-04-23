@@ -5,21 +5,42 @@
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of SSDT-USBX.aml, Thu Mar 23 19:19:12 2023
+ * Disassembly of SSDT-EC.aml, Thu Mar 23 19:18:39 2023
  *
  * Original Table Header:
  *     Signature        "SSDT"
- *     Length           0x000000D9 (217)
+ *     Length           0x0000007D (125)
  *     Revision         0x02
- *     Checksum         0x8B
- *     OEM ID           "CORP"
- *     OEM Table ID     "SsdtUsbx"
+ *     Checksum         0x9D
+ *     OEM ID           "CORP "
+ *     OEM Table ID     "SsdtEC"
  *     OEM Revision     0x00001000 (4096)
  *     Compiler ID      "INTL"
  *     Compiler Version 0x20221020 (539103264)
  */
-DefinitionBlock ("", "SSDT", 2, "CORP", "SsdtUsbx", 0x00001000)
+DefinitionBlock ("", "SSDT", 2, "CORP ", "SsdtEC", 0x00001000)
 {
+    External (_SB_.PCI0.LPC0, DeviceObj)
+
+    Scope (\_SB.PCI0.LPC0)
+    {
+        Device (EC)
+        {
+            Name (_HID, "ACID0001")  // _HID: Hardware ID
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                If (_OSI ("Darwin"))
+                {
+                    Return (0x0F)
+                }
+                Else
+                {
+                    Return (Zero)
+                }
+            }
+        }
+    }
+
     Scope (\_SB)
     {
         Device (USBX)

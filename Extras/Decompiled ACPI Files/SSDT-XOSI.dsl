@@ -1,22 +1,22 @@
 /*
  * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20221020 (32-bit version)
- * Copyright (c) 2000 - 2022 Intel Corporation
+ * AML/ASL+ Disassembler version 20230331 (32-bit version)
+ * Copyright (c) 2000 - 2023 Intel Corporation
  * 
  * Disassembling to symbolic ASL+ operators
  *
- * Disassembly of SSDT-XOSI.aml, Thu Mar 23 19:18:39 2023
+ * Disassembly of SSDT-XOSI.aml, Sun Apr 23 19:57:53 2023
  *
  * Original Table Header:
  *     Signature        "SSDT"
  *     Length           0x0000011F (287)
  *     Revision         0x02
- *     Checksum         0x2E
+ *     Checksum         0x29
  *     OEM ID           "DRTNIA"
  *     OEM Table ID     "XOSI"
  *     OEM Revision     0x00001000 (4096)
  *     Compiler ID      "INTL"
- *     Compiler Version 0x20221020 (539103264)
+ *     Compiler Version 0x20230331 (539165489)
  */
 DefinitionBlock ("", "SSDT", 2, "DRTNIA", "XOSI", 0x00001000)
 {
