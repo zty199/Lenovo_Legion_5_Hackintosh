@@ -37,13 +37,13 @@
 			<key>IOProviderMergeProperties</key>
 			<dict>
 				<key>kUSBSleepPortCurrentLimit</key>
-				<integer>2400</integer>
+				<integer>2100</integer>
 				<key>kUSBSleepPowerSupply</key>
-				<integer>2400</integer>
+				<integer>2100</integer>
 				<key>kUSBWakePortCurrentLimit</key>
-				<integer>3600</integer>
+				<integer>2400</integer>
 				<key>kUSBWakePowerSupply</key>
-				<integer>3600</integer>
+				<integer>2400</integer>
 				<key>port-count</key>
 				<data>BgAAAA==</data>
 				<key>ports</key>
@@ -132,13 +132,13 @@
 			<key>IOProviderMergeProperties</key>
 			<dict>
 				<key>kUSBSleepPortCurrentLimit</key>
-				<integer>2400</integer>
+				<integer>2100</integer>
 				<key>kUSBSleepPowerSupply</key>
-				<integer>2400</integer>
+				<integer>2100</integer>
 				<key>kUSBWakePortCurrentLimit</key>
-				<integer>3600</integer>
+				<integer>2400</integer>
 				<key>kUSBWakePowerSupply</key>
-				<integer>3600</integer>
+				<integer>2400</integer>
 				<key>port-count</key>
 				<data>BgAAAA==</data>
 				<key>ports</key>
