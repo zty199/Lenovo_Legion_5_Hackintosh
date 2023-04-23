@@ -1,6 +1,7 @@
 # macOS on Lenovo Legion 5 6th Gen
 
-![Desktop](/Images/Desktop.png)
+![Desktop](/Images/Desktop_Monterey.png)
+![Desktop](/Images/Desktop_Ventura.png)
 
 ## Table of Contents
 
@@ -34,7 +35,7 @@ Audio       | Realtek ALC287 | ✅
 ## macOS Update History
 
 - ✅ macOS Monterey 12.6.1
-- ✅ macOS Ventura 13.2.1
+- ✅ macOS Ventura 13.3.1
 
 ## What's working
 
