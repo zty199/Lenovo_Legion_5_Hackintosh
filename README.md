@@ -56,7 +56,7 @@ Type | Info | Status
 :---------|:---------|:----------
 USB | At the moment we need to disable one of the two USB controllers, so the ports connected to it will NOT work even in other OSes, until the setting is reverted in UMAF. | ⚠️
 Bluetooth | Same as USB | ⚠️
-Brightness | Doesn't even work properly in Linux, this is because this laptop uses DC Dimmer instead of PWN, (Lunar)[https://github.com/alin23/Lunar] app can be used as workaround. | ⚠️
+Brightness | Doesn't even work properly in Linux, this is because this laptop uses DC Dimmer instead of PWM, [Lunar](https://github.com/alin23/Lunar) app can be used as workaround. | ⚠️
 Sleep | PowerPlay panic on wake, still investigating | ⚠️
 
 ## Instructions
